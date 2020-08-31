@@ -14,10 +14,22 @@ namespace StockMarket.AccountAPI.Services
         {
             accountRepository = repo;
         }
-
         public void AddUser(User item)
         {
             accountRepository.AddUser(item);
+        }
+        public void DeleteUser(string id)
+        {
+            accountRepository.DeleteUser(id);
+        }
+        public User GetUserById(string id)
+        {
+            return accountRepository.GetUserById(id);
+        }
+
+        public void Update(User user)
+        {
+            accountRepository.UpdateUser(user);
         }
 
         public User Validate(string uname, string pwd)

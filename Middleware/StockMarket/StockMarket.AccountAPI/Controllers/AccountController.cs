@@ -34,7 +34,7 @@ namespace StockMarket.AccountAPI.Controllers
                 }
             }
             catch(Exception ex)
-            {
+            { 
                 return StatusCode(500, ex.Message);
             }
         }
@@ -48,6 +48,45 @@ namespace StockMarket.AccountAPI.Controllers
                 return Ok();
             }
             catch(Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+        [HttpDelete("Delete/{id}")]
+        public IActionResult DeleteUser(string id)
+        {
+            try
+            {
+                service.DeleteUser(id);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+        [HttpPut]
+        [Route("Update")]
+        public IActionResult UpdateUser(User user)
+        {
+            try
+            {
+                service.Update(user);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+        [HttpGet("GetUserById/{id}")]
+        public IActionResult GetUserById(string id)
+        {
+            try
+            {
+                return Ok(service.GetUserById(id));
+            }
+            catch (Exception ex)
             {
                 return StatusCode(500, ex.Message);
             }

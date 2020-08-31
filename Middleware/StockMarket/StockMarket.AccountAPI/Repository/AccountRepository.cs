@@ -16,7 +16,25 @@ namespace StockMarket.AccountAPI.Repository
         }
         public void AddUser(User item)
         {
-            context.Add(item);
+            context.Users.Add(item);
+            context.SaveChanges();
+        }
+
+        public void DeleteUser(string id)
+        {
+            User user = GetUserById(id);
+            context.Users.Remove(user);
+            context.SaveChanges();
+        }
+
+        public User GetUserById(string id)
+        {
+           return context.Users.Find(id);
+        }
+
+        public void UpdateUser(User user)
+        {
+            context.Users.Update(user);
             context.SaveChanges();
         }
 

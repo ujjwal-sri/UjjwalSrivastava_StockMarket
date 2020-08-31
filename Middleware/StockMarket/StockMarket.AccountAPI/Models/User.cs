@@ -20,6 +20,8 @@ namespace StockMarket.AccountAPI.Models
         [StringLength(30)]
         public string Password { get; set; }
         [Required]
+        public string UserType { get; set; }
+        [Required]
         [StringLength(30)]
         public string Email { get; set; }
         [StringLength(13)]

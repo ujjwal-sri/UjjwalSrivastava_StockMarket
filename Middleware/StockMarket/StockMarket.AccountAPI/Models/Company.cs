@@ -17,6 +17,14 @@ namespace StockMarket.AccountAPI.Models
         [Required]
         [StringLength(25)]
         public string CompanyName { get; set; }
+        public int TurnOver { get; set; }
+        [StringLength(30)]
+        public string CEO { get; set; }
+        public string BoardOfDirectors { get; set; }
+        public string ListInStockExchanges { get; set;}
+        public string Sector { get; set; }
+        public string CompanyWriteup { get; set; }
+        public string StockCode { get; set; }
         public IEnumerable<StockPrice> StockPrices { get; set; }
     }
 }

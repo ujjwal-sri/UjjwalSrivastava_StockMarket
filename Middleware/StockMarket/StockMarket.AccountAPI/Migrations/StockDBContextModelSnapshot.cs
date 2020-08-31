@@ -25,10 +25,32 @@ namespace StockMarket.AccountAPI.Migrations
                         .HasColumnType("nvarchar(30)")
                         .HasMaxLength(30);
 
+                    b.Property<string>("BoardOfDirectors")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CEO")
+                        .HasColumnType("nvarchar(30)")
+                        .HasMaxLength(30);
+
                     b.Property<string>("CompanyName")
                         .IsRequired()
                         .HasColumnType("nvarchar(25)")
                         .HasMaxLength(25);
+
+                    b.Property<string>("CompanyWriteup")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ListInStockExchanges")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Sector")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("StockCode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("TurnOver")
+                        .HasColumnType("int");
 
                     b.HasKey("CompanyCode");
 
@@ -91,6 +113,10 @@ namespace StockMarket.AccountAPI.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(30)")
                         .HasMaxLength(30);
+
+                    b.Property<string>("UserType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Username")
                         .IsRequired()

@@ -10,5 +10,8 @@ namespace StockMarket.AccountAPI.Repository
     {
         void AddUser(User item);
         User Validate(string uname, string pwd);
+        void DeleteUser(string id);
+        void UpdateUser(User user);
+        User GetUserById(string id);
     }
 }
