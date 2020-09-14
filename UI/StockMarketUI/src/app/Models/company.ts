@@ -1,11 +1,12 @@
 export class Company {
-    company_code:string;
-    company_name:string;
-    turnover:number;
+    companyCode:string;
+    companyName:string;
+    turnOver:number;
     ceo:string;
-    board_of_directors:string;
-    list_in_stock_exchanges:string;
+    boardOfDirectors:string;
+    listInStockExchanges:string;
     sector:string;
-    company_writeup:string;
-    stock_code:string;
+    companyWriteup:string;
+    stockCode:string;
+    stockPrices:DoubleRange;
 }

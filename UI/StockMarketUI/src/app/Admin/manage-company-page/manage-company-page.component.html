@@ -1,0 +1,70 @@
+
+<div class="container">
+    <table class="table table-bordered table-hover">
+        <tr>
+            <td>Company Code</td>
+            <td>
+                <input type="text" class="form-control" [(ngModel)]="companyCode" required="required" pattern="title">
+            </td>
+        </tr>
+        <tr>
+            <td>Company Name</td>
+            <td>
+                <input type="text" class="form-control" [(ngModel)]="companyName" required="required" pattern="title">
+            </td>
+        </tr>
+        <tr>
+            <td>Turnover</td>
+            <td>
+                <input type="text" class="form-control" [(ngModel)]="turnOver" required="required" pattern="title">
+            </td>
+        </tr>
+        <tr>
+            <td>CEO</td>
+            <td>
+                <input type="text" class="form-control" [(ngModel)]="ceo" required="required" pattern="title">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button class="btn-primary" (click)="Search()">Search</button>
+                <button class="btn-primary" (click)="Add()">Add</button>
+                <button class="btn-primary" (click)="Update()">Update</button>
+                <button class="btn-primary" (click)="Delete()">Delete</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                {{errmsg}}
+            </td>
+        </tr>
+    </table>
+    <table class="table table-bordered table hover">
+        <thead>
+            <tr>
+                <th>Company Code</th>
+                <th>Company Name</th>
+                <th>Turn Over</th>
+                <th>CEO</th>
+                <th>Board of Directors</th>
+                <th>List in Stock Exchanges</th>
+                <th>Sector</th>
+                <th>Company Writeup</th>
+                <th>Stock Code</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of list">
+                <td>{{item.companyCode}}</td>
+                <td>{{item.companyName}}</td>
+                <td>{{item.turnOver}}</td>
+                <td>{{item.ceo}}</td>
+                <td>{{item.boardOfDirectors}}</td>
+                <td>{{item.listInStockExchanges}}</td>
+                <td>{{item.sector}}</td>
+                <td>{{item.companyWriteup}}</td>
+                <td>{{item.stockCode}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
