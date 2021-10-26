@@ -22,15 +22,8 @@ namespace StockMarket.AdminAPI.Controllers
         [Route("AddCompany")]
         public IActionResult AddCompany(Company item)
         {
-            try
-            {
-                service.AddCompany(item);
-                return Ok();
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, ex.Message);
-            }
+            service.AddCompany(item);
+            return Ok();
         }
         [HttpDelete]
         [Route("Delete/{cid}")]
