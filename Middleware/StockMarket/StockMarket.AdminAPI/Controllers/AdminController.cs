@@ -43,14 +43,9 @@ namespace StockMarket.AdminAPI.Controllers
         [Route("GetCompany/{cid}")]
         public IActionResult GetCompany(string cid)
         {
-            try
-            {
+           
                 return Ok(service.GetCompany(cid));
-            }
-            catch(Exception ex)
-            {
-                return StatusCode(500, ex.Message);
-            }
+            
         }
         [HttpPut]
         [Route("UpdateCompany")]
