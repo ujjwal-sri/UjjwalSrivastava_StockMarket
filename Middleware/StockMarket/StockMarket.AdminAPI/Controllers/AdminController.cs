@@ -93,14 +93,9 @@ namespace StockMarket.AdminAPI.Controllers
         [Route("GetAllCompany")]
         public IActionResult GetAllCompany()
         {
-            try
-            {
+           
                 return Ok(service.GetAllCompany().ToList());
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, ex.Message);
-            }
+            
         }
     }
 }
