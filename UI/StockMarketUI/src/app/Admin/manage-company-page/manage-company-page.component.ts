@@ -31,6 +31,7 @@ export class ManageCompanyPageComponent implements OnInit {
      }
   
     ngOnInit(): void {
+      console.log("admin manage company page");
     }
     Search()
     {
