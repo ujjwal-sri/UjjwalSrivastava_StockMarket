@@ -11,6 +11,7 @@ export class AdminLoginPageComponent implements OnInit {
   constructor(private router:Router) { }
 
   ngOnInit(): void {
+    console.log("admin login page");
   }
   Validate() {
     if (this.uname == "Admin1" && this.password == "password") {
