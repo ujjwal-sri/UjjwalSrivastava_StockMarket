@@ -15,6 +15,7 @@ export class AdminLandPageComponent implements OnInit {
     this.router.navigateByUrl('AdminManageCompany');
   }
   AdminLand(){
+    console.log("admin land page");
     this.router.navigateByUrl('AdminLogin');
   }
 }
